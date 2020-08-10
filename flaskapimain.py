@@ -9,7 +9,8 @@ def index():
 
 @app.route('/post', methods=['POST'])
 def post_json():
-    return 'This is post'
+    posteddata = request.data
+    return posteddata
 
 @app.route('/get', methods=['GET'])
 def get_json():
