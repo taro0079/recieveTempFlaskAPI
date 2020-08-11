@@ -31,7 +31,7 @@ def get_json():
     with open(fn, 'r') as f:
         for row in csv.DictReader(f):
             templst.append(float(row['temp']))
-            datelst.append(float(row['date']))
+            datelst.append(row['date'])
 
     rejsondata = {'date' : datelst, 'temp' : templst}
     return json.dumps(rejsondata).encode('utf-8')
