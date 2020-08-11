@@ -42,7 +42,7 @@ def get_json():
 if __name__ == '__main__':
 
     # 記録用csvファイルを作成する
-    fn = './data.csv' # ファイル名の設定
+    fn = 'data.csv' # ファイル名の設定
     # ファイルが存在しない場合の処理 -> csvファイルを作る
     if os.path.exists(fn) == False:
         with open(fn, 'w') as f:
