@@ -1,9 +1,11 @@
 import os
 from flask import Flask, render_template, request, redirect, url_for, send_from_directory, session
 import json
+from flask_cors import CORS
 import csv
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/')
 def index():
